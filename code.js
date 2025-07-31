@@ -12,12 +12,12 @@ let cardsList = [];
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   document.body.classList.add('dark');
-  icon.src = '/assets/images/icon-sun.svg';
-  logo.src = '/assets/images/redwhite.svg';
+  icon.src = './assets/images/icon-sun.svg';
+  logo.src = './assets/images/redwhite.svg';
 } else {
   document.body.classList.remove('dark');
-  icon.src = '/assets/images/icon-moon.svg';
-  logo.src = '/assets/images/logo.svg';
+  icon.src = './assets/images/icon-moon.svg';
+  logo.src = './assets/images/logo.svg';
 }
 
 // Dark Mode Toggle
@@ -25,14 +25,14 @@ toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
 
-  icon.src = isDark ? '/assets/images/icon-sun.svg' : '/assets/images/icon-moon.svg';
-  logo.src = isDark ? '/assets/images/redwhite.svg' : '/assets/images/logo.svg';
+  icon.src = isDark ? './assets/images/icon-sun.svg' : './assets/images/icon-moon.svg';
+  logo.src = isDark ? './assets/images/redwhite.svg' : './assets/images/logo.svg';
 
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
 // Load Cards from JSON + Apply States
-fetch("/data.json")
+fetch("./data.json")
   .then((response) => response.json())
   .then((dataArray) => {
     const container = document.getElementById("container");
