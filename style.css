@@ -1,0 +1,312 @@
+:root {
+    /* for light mode */
+  --bg-color1: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --bg-color2: #fff;
+  --bg-color3:#EEEEEE;
+  --bg-color4: #FCFDFF;
+  --bg-color5: #f5f5f5;
+  --bg-color6: #ccc;
+  --bg-color7: #C8241D; 
+  --bg-color8: #DF483F;
+  --bg-color9:#EEEEEE;
+  --bg-color10:#fff;
+  --outline: #ccc;
+  --bg-color-active: #C9211A;
+  --bg-color-hover: #C6C6C6;
+  --bg-color-hover2: #C9211A;
+  --bg-color-hover3: #DE4841;
+  --bg-color-hover4: #F6FAFB;
+  --bg-color-hover5: #C6C6C6;
+  --color-focus: #AD302A;
+  --text-color1: #081439;
+  --text-color2: #fff;
+  --text-color3: #707684;
+  --text-color4: #8C8D91;
+  --tex-color5:black;
+  --bg-slider:white;
+  --bg-slider-slide: #C8241D;
+  --bg-slider-hover: #DF483F;
+
+  /* jitne colors use hue hai sab ke var banao */
+}
+
+body.dark{
+    /* For Dark Mode */
+--bg-color1: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --bg-color2: #1F2535;
+  --bg-color3: #1F2535;
+  --bg-color4: #525868;
+  --bg-color5: #1F2535;
+  --bg-color6: #51576A;
+  --bg-color7: #C8241D; 
+  --bg-color8: #DF483F;
+  --bg-color9:#2F354B;
+  --bg-color10:#2F354B;
+  --outline: #3E4357;
+  --bg-color-active: #C9211A;
+  --bg-color-hover: #C6C6C6;
+  --bg-color-hover2: #C9211A;
+  --bg-color-hover3: #DE4841;
+  --bg-color-hover4: #525768;
+  --bg-color-hover5: #525768;
+  --color-focus: #AD302A;
+  --text-color1: #FBFDFC;
+  --text-color2: #fff;
+  --text-color3: #fff;
+  --text-color4: #8C8D91;
+  --text-color5:#fff;
+  --bg-slider:white;
+  --bg-slider-slide: #C8241D;
+  --bg-slider-hover: #DF483F;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  background: var(--bg-color1);
+  background-attachment: fixed;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap:12px;
+  align-items: stretch; 
+}
+
+.TopBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:80%;
+    background: var(--bg-color2);
+    margin-top: 30px;
+    padding:10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.TopBar button{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--bg-color9);
+}
+.TopBar button:hover{
+    cursor: pointer;
+    background:var(--bg-color-hover5);
+}
+
+button:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.toggle-switch input:focus + .slider {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  transition: none;
+}
+
+.MainBar{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.LeftBar h1{
+  color: var(--text-color1);
+}
+.FilterBar
+{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: auto;
+}
+@media (max-width: 390px) {
+  .MainBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.FilterBar button{
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background:var(--bg-color10);
+    margin-left: 10px;
+    color: var(--text-color5);
+    cursor: pointer;
+    border: 1px solid var(--outline);
+    
+}
+.FilterBar .active{
+    background: var(--bg-color-active);
+    color: var(--text-color2);
+}
+
+.FilterBar button:hover{
+    background: var(--bg-color-hover4);
+    color: var(--text-color3);
+}
+
+.FilterBar .active:hover{
+    background:var(  --bg-color-hover3);
+    color: var(--text-color2);
+}
+
+.card-ext{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: start;
+  width: 80%;
+}
+
+@media (max-width: 375px) {
+  .card-ext {
+    justify-content: center;
+  }
+}
+.Card{
+  position: relative;
+  display:flex;
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-width: 280px;
+  justify-content: space-between;
+  flex-direction: column;  
+  min-height: 180px;
+  padding: 15px 20px 0px 20px;
+  background: var(--bg-color5);
+  border: 1px solid var(--outline);
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.Card-content{
+  font-size: 16px;  
+  margin-top: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+
+}
+
+.Card-content h2{
+  color: var(--text-color1);
+}
+.Card-content p{
+  color: var(--text-color4);
+  word-wrap: break-word;
+}
+.Buttons{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;  
+  width: 100%;  
+}
+
+.Buttons .remove{
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: var(--bg-color5);
+  border: 1px solid var(--outline);
+  color: var(--text-color1);
+}
+.Buttons .remove:hover{
+  background: #C6231A;
+  color: var(--text-color2);
+  cursor: pointer;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 35px; 
+  height: 18px; 
+}
+
+.toggle-switch input {
+  opacity: 0; 
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-color6); 
+  transition: 0.4s; 
+  border-radius: 18px; 
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; 
+  width: 18px; 
+  left: 0px; 
+  bottom: 0px;
+  background-color: var(--bg-slider); 
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color:var(--bg-slider-slide); 
+}
+input:checked + .slider:hover{
+  background-color:var(--bg-slider-hover); 
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px); /* Move the thumb when checked */
+}
+
+footer {
+
+  padding: 10px;
+  text-align: center;
+  color: var(--text-color5);
+}
+
+footer a{
+  color: var(--text-color1);
+  text-decoration: none;
+}

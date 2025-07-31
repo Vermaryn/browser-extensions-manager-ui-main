@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- For Css  -->
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="TopBar">
+    <span><img id="logo" src="/assets/images/logo.svg" alt=""></span>
+    <span><button id="ToggleBtn"><img id="icon" src="/assets/images/icon-moon.svg" alt="" width="24"></button></span>
+  </header>
+  
+  <section class="MainBar">
+    <div class="LeftBar">
+      <h1>Extensions List</h1>
+    </div>
+    <nav class="FilterBar">
+      <button id="all" class="active">All</button>
+      <button id="active">Active</button>
+      <button id="inactive">Inactive</button>
+    </nav>
+  </section>
+  <!-- Add your extension cards here -->
+  <!-- Example card -->
+  <main id="container" class="card-ext">
+      <article id="card" class="Card" style="display: none;">
+      <div class="cards">
+        <div class="card-img">
+          <img src="" alt="">
+        </div>
+        <div class="Card-content">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="Buttons">
+        <button class="remove">Remove</button>
+        <label class="toggle-switch">
+          <input type="checkbox" id="myToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </article>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>
+    Coded by <a href="#">Pradeep Verma</a>
+  </footer>
+  <script src="code.js"></script>
+</body>
+
+</html>
